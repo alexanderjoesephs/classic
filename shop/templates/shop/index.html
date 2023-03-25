@@ -1,0 +1,13 @@
+{% extends "shop/layout.html" %}
+
+{% block body %}
+  <div class="container">
+    {%for shirt in shirts%}
+      <div class="item">
+        <img width="340" src="{{shirt.image_link.url}}">
+        <p>{{shirt.name}}</p>
+        <p>£{{shirt.price}}0</p>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
